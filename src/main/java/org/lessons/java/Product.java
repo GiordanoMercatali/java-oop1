@@ -39,4 +39,9 @@ public class Product {
         String newCode = "0000" + String.valueOf(code);
         return newCode;
     }
+
+    String getCodeName(){
+        String newCodeName = "0000" + String.valueOf(code) + "-" + name;
+        return newCodeName;
+    }
 }

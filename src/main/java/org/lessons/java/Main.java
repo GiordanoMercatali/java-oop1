@@ -7,6 +7,8 @@ public class Main {
         double taxedPrice = p.getTaxedPrice();
         System.out.println("Price with taxes: " + taxedPrice + "$");
         String code = p.getCode();
-        System.out.println(code);
+        System.out.println("Product code: " + code);
+        String codename = p.getCodeName();
+        System.out.println("Full product name+code: " + codename);
     }
 }
