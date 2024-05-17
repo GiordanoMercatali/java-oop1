@@ -12,21 +12,24 @@ public class Product {
     double vat; //IVA, based on Italian VAT (22%)
 
     Product(){
-        vat = (22 / 100);
+        vat = 22;
     }
 
-    Product(int code, String name, String description, double price, double vat){
+    public Product(int code, String name, String description, double price, double vat){
         this.code = code;
         this.name = name;
         this.description = description;
         this.price = price;
-        this.vat = vat;
+        this.vat = vatPerc(vat);
     }
 
-    double getTaxedPrice(){
+    double vatPerc(double iva){
+        return (iva / 100);
+    }
+
+    double getTaxedPrice(double priceToTax){
         // double price = Double.parseDouble(myScanner.nextLine());
-        double newTaxedPrice = price + (price * vat);
-        return newTaxedPrice;
+        return priceToTax + (priceToTax * vat);
     }
 
     // int getCode(){
