@@ -1,5 +1,7 @@
 package org.lessons.java.Bank;
 
+import java.util.Random;
+
 public class Account {
     int accountNumber;
     String ownerName;
@@ -9,8 +11,8 @@ public class Account {
         balance = 0;
     }
 
-    Account(int accountNumber, String ownerName, double balance){
-        this.accountNumber = accountNumber;
+    Account(String ownerName, double balance){
+        this.accountNumber = new Random().nextInt(1000);;
         this.ownerName = ownerName;
         this.balance = balance;
     }
