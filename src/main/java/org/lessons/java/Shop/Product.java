@@ -1,4 +1,4 @@
-package org.lessons.java;
+package org.lessons.java.Shop;
 
 import java.util.Scanner;
 
